@@ -45,7 +45,7 @@ namespace Inheritance
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine();
             Console.WriteLine(" ================================================= ");
-            Console.WriteLine("     Agent                                         ");
+            Console.WriteLine("     Venue manager                                        ");
             Console.WriteLine(" ================================================= ");
             Console.WriteLine();
             Console.WriteLine();

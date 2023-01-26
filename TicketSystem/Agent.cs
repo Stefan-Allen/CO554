@@ -29,7 +29,7 @@ namespace TicketSystem.App02
             switch (choice)
             {
                 case 1:
-                    Console.WriteLine("\n Please Enter the name of the show you would like to cancel ");
+                    Console.WriteLine("\n Please Enter the name of the show you would like to buy seats for ");
                     var inputted = Console.ReadLine();
                     var show = Program.Venues.FirstOrDefault(x => x.Name.Trim().ToLower() == inputted.Trim().ToLower(), null);
                     if (show == null)
@@ -88,4 +88,5 @@ namespace TicketSystem.App02
             show.SeniorAdults = show.SeniorAdults - number8;
         }
     }
+
 }

@@ -107,4 +107,5 @@ namespace TicketSystem.App01
             Program.Purchases.Add(new Purchase { Name = show.Name, AdultPurchased = number7, ChildernPurchased = number5, StudentPurchased = number6, SiniorAdultPurchased = number8 });
         }
     }
+
 }
