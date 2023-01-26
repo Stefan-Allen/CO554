@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Inheritance;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,14 +22,7 @@ namespace TicketSystem.App02
                 " Home",
             };
 
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine();
-            Console.WriteLine(" ================================================= ");
-            Console.WriteLine("     Agent                                         ");
-            Console.WriteLine(" ================================================= ");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.White;
+            AgentHeading.HeadingAgent();
 
 
             int choice = Helper.SelectChoice(choices);

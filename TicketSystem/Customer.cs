@@ -1,10 +1,13 @@
-﻿using Org.BouncyCastle.Asn1.X509;
+﻿using Inheritance;
+using Org.BouncyCastle.Asn1.X509;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
+using TicketSystem.App02;
 
 namespace TicketSystem.App01
 {
@@ -17,19 +20,11 @@ namespace TicketSystem.App01
             {
                 " BuyTickets",
                 " ListAllShows",
-                " ShowByDate",
-                " ShowSeatingChart",
                 " SeePurchases",
+                " Home",
             };
 
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine();
-            Console.WriteLine(" ================================================= ");
-            Console.WriteLine("     Customer                                      ");
-            Console.WriteLine(" ================================================= ");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.White;
+            AgentHeading.HeadingCustomer();
 
 
             int choice = Helper.SelectChoice(choices);
@@ -42,6 +37,8 @@ namespace TicketSystem.App01
                     if (show == null)
                     {
                         Console.WriteLine("No show with that name");
+                        Customer App01 = new Customer();
+                        App01.Run();
                         return;
                     }
                     BuyTickets(show);
@@ -52,18 +49,10 @@ namespace TicketSystem.App01
                     Run();
                     break;
                 case 3:
-                    ShowByDate();
-                    Run();
-                    break;
-                case 4:
-                    ShowSeatingChart();
-                    Run();
-                    break;
-                case 5:
                     SeePurchases();
                     Run();
                     break;
-                case 6:
+                case 4:
                     Home();
                     Run();
                     break;
@@ -82,16 +71,6 @@ namespace TicketSystem.App01
                 Console.WriteLine($"Show Name: {v.Name} Tickets Brought: Childern:{v.ChildernPurchased} Student:{v.StudentPurchased} Adult:{v.AdultPurchased} Sinior:{v.SiniorAdultPurchased}");
             });
 
-        }
-
-        private void ShowSeatingChart()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void ShowByDate()
-        {
-            throw new NotImplementedException();
         }
 
         private void ListAllShows()

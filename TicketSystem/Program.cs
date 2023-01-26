@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using Net.Pkcs11Interop.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,14 +20,10 @@ namespace TicketSystem
 
         public static void Main(string[] args)
         {
-            //Main header output
-            Console.ForegroundColor = ConsoleColor.Green;
+            Headings.Title();
 
-            Console.WriteLine();
-            Console.WriteLine(" ================================================= ");
-            Console.WriteLine("    BNU  CO554  CO554 OOP 2022 - 2023              ");
-            Console.WriteLine(" ================================================= ");
-            Console.WriteLine();
+            GFG.Ecap1();
+            
 
             //selecter for different apps
             string[] choices =
@@ -36,9 +33,7 @@ namespace TicketSystem
                 " VenueManager",
             };
 
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(" Which Application would you like to use ?");
-            Console.WriteLine();
+            Text.Title();
 
             int choice = Helper.SelectChoice(choices);
             switch (choice)

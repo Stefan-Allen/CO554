@@ -1,4 +1,5 @@
-﻿using Org.BouncyCastle.Utilities.IO;
+﻿using Inheritance;
+using Org.BouncyCastle.Utilities.IO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,14 +29,7 @@ namespace TicketSystem.App03
                 " Home",
             };
 
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine();
-            Console.WriteLine(" ================================================= ");
-            Console.WriteLine("     VenueManager                                  ");
-            Console.WriteLine(" ================================================= ");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.White;
+            VenueHeading.HeadingVenue();
 
 
             int choice = Helper.SelectChoice(choices);
